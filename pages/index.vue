@@ -1,33 +1,10 @@
 <template>
   <div>
-    <section
-      class="flex justify-between w-11/12 lg:w-10/12 3xl:container mx-auto py-6"
-    >
-      <div class="w-4/12 mx-auto">
-        <p class="text-[24px] text-blue-primary font-semibold tracking-widest">
-          TRIMITRA<span class="text-blue-secondary tracking-widest">LAND</span>
-        </p>
-      </div>
-      <nav class="w-4/12 mx-auto flex justify-center items-center">
-        <ul class="flex gap-8 text-black-primary">
-          <li>Home</li>
-          <li>Featured</li>
-          <li>Products</li>
-        </ul>
-      </nav>
-      <div class="w-4/12 mx-auto flex justify-end items-center">
-        <nuxt-link
-          class="bg-blue-primary text-white py-2 px-4 rounded-md"
-          to="/"
-          >Contact Us</nuxt-link
-        >
-      </div>
-    </section>
-
+    <Navigation></Navigation>
     <!-- header -->
     <section class="flex w-11/12 lg:w-10/12 3xl:container mx-auto mt-5 gap-12">
       <div class="w-6/12 flex flex-col justify-center">
-        <h1 class="text-[38px] font-bold tracking-wide text-black-primary">
+        <h1 class="text-[38px] font -bold tracking-wide text-black-primary">
           Designer Homes <br />
           in a Beautiful and <br />
           Lush Estate
@@ -71,7 +48,7 @@
       </div>
       <!-- list product -->
       <VueSlickCarousel class="mt-4" v-bind="settings" ref="carousel_prod">
-        <div class="px-3" v-for="(product, index) in 5" :key="index">
+        <div class="px-3" v-for="(product, index) in 10" :key="index">
           <div class="">
             <div class="">
               <img
@@ -102,6 +79,112 @@
         </div>
       </VueSlickCarousel>
     </section>
+
+    <!-- Image Jumbroton -->
+    <section class="w-11/12 lg:w-10/12 3xl:container mx-auto mt-12">
+      <div>
+        <img src="@/assets/dummy/Group.png" />
+      </div>
+    </section>
+
+    <!-- Fitur -->
+    <section class="w-11/12 lg:w-10/12 3xl:container mx-auto mt-12">
+      <div class="w-full text-black-primary px-3">
+        <div class="">
+          <h4 class="text-[28px] font-semibold">Our Features</h4>
+          <span>We Offer you the best places</span>
+        </div>
+      </div>
+      <div class="flex justify-between mt-4">
+        <!-- Card -->
+        <div class="w-60 px-3">
+          <div class="flex flex-col items-center gap-2">
+            <img src="@/assets/icons/facility.svg" width="40" height="40" />
+            <h4 class="text-[24px] font-bold">Facility</h4>
+          </div>
+          <p class="text-[14px] mt-2">
+            Exclusive Club House facilities that have a swimming pool, indoor
+            fitness, children's playground, Corner Garden, jogging track at the
+            Botanical Park and other facilities
+          </p>
+        </div>
+        <div class="w-60 px-3">
+          <div class="flex flex-col items-center gap-2">
+            <img src="@/assets/icons/park.svg" width="40" height="40" />
+            <h4 class="text-[24px] font-bold">Botanical Park</h4>
+          </div>
+          <p class="text-[14px] mt-2">
+            Exclusive Club House facilities that have a swimming pool, indoor
+            fitness, children's playground, Corner Garden, jogging track at the
+            Botanical Park and other facilities
+          </p>
+        </div>
+        <div class="w-60 px-3">
+          <div class="flex flex-col items-center gap-2">
+            <img src="@/assets/icons/location.svg" width="25" height="25" />
+            <h4 class="text-[24px] font-bold">Location</h4>
+          </div>
+          <p class="text-[14px] mt-2">
+            Exclusive Club House facilities that have a swimming pool, indoor
+            fitness, children's playground, Corner Garden, jogging track at the
+            Botanical Park and other facilities
+          </p>
+        </div>
+        <div class="w-60 px-3">
+          <div class="flex flex-col items-center gap-2">
+            <img src="@/assets/icons/access.svg" width="26" height="26" />
+            <h4 class="text-[24px] font-bold">Easy Access</h4>
+          </div>
+          <p class="text-[14px] mt-2">
+            Exclusive Club House facilities that have a swimming pool, indoor
+            fitness, children's playground, Corner Garden, jogging track at the
+            Botanical Park and other facilities
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section class="w-11/12 lg:w-10/12 3xl:container mx-auto mt-12">
+      <div class="flex justify-between w-full text-black-primary px-3">
+        <div class="">
+          <h4 class="text-[28px] font-semibold">Our News</h4>
+          <span>We Offer you the best places</span>
+        </div>
+        <div class="">
+          <button @click="prodPrev">
+            <img src="@/assets/icons/arrow-left.svg" alt="" />
+          </button>
+          <button @click="prodNext">
+            <img src="@/assets/icons/arrow-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- list product -->
+      <VueSlickCarousel class="mt-4" v-bind="settings" ref="carousel_prod">
+        <div class="px-3" v-for="(product, index) in 10" :key="index">
+          <div class="">
+            <div class="">
+              <img
+                src="@/assets/dummy/photo-1570129477492-45c003edd2be 1.png"
+                alt=""
+              />
+            </div>
+            <div class="bg-white flex justify-between mt-3">
+              <div class="">
+                <h6 class="font-bold">
+                  Bank BUMN Ini Dorong Santri Untuk Jadi Developer
+                </h6>
+                <span>Jan 11, 2022</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </VueSlickCarousel>
+    </section>
+
+    <!-- Footer -->
+    <Footer></Footer>
   </div>
 </template>
 
@@ -109,7 +192,6 @@
 export default {
   data() {
     return {
-      image: "../assets/dummy/Group.png",
       settings: {
         infinite: false,
         speed: 500,
