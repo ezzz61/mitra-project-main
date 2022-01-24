@@ -2,11 +2,12 @@
   <!-- Footer -->
     <footer class="w-full py-6 border-t mt-12 bg-sky-600">
       <section class="flex justify-between w-11/12 lg:w-10/12 3xl:container mx-auto px-3">
-        <div class="w-min">
-          <p class="text-[24px] text-blue-primary font-semibold tracking-widest bg-gray-100">
+        <div class="">
+          <!-- <p class="text-[24px] text-blue-primary font-semibold tracking-widest bg-gray-100">
             TRIMITRA<span class="text-blue-secondary tracking-widest"
               >LAND</span>
-          </p>
+          </p> -->
+          <img src="@/assets/icons/mitraland.svg" width="80" height="80">
         </div>
         <div class="">
           <h2 class="text-[24px] font-medium text-white">FIND US</h2>
