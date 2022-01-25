@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Navigation></Navigation>
-    <header class="flex w-11/12 min-h-screen lg:w-10/12 3xl:container mx-auto">
+    <Navigation/>
+    <header class="flex w-11/12 lg:w-10/12 3xl:container mx-auto">
       <div>
         <img src="@/assets/dummy/heroDetail.png" width="500" height="500"/>
       </div>
@@ -53,11 +53,12 @@
         </div>
       </div>
     </header>
-    <Footer></Footer>
+    <Footer/>
   </div>
 </template>
 
 <script>
+export default{}
 </script>
 
 <style>
