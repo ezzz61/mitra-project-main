@@ -1,32 +1,37 @@
 <template>
   <div>
-    <Navigation></Navigation>
+    <Navigation />
     <!-- header -->
-    <section class="flex w-11/12 lg:w-10/12 3xl:container mx-auto mt-5 gap-12">
-      <div class="w-6/12 flex flex-col justify-center">
-        <h1 class="text-[38px] font -bold tracking-wide text-black-primary">
+    <section class="flex w-11/12 lg:w-10/12 3xl:container mx-auto mt-5 gap-10">
+      <div class="w-full md:w-6/12 flex flex-col justify-center">
+        <h1
+          class="
+            text-[30px]
+            md:text-[36px]
+            font-bold
+            tracking-wide
+            uppercase
+            text-black-primary
+          "
+        >
           Designer Homes <br />
           in a Beautiful and <br />
           Lush Estate
         </h1>
-        <p class="mt-4 text-lg font-normal text-black-primary">
+        <p class="mt-4 tracking-wide text-black-primary">
           Designed to meet the needs of young families and equipped with
           facilities for the needs of a quality, peaceful and relaxing life. The
           house is also designed with an optimal layout, equipped with an
           Innercourt.
         </p>
-        <div class="">
-          <button class="mt-4 bg-blue-primary text-white py-2 px-4 rounded-md">
-            Let's Explore
-          </button>
+        <div class="mt-4">
+          <vs-button success class="shadow font-medium rounded text-gray-200">
+            <span class="text-[16px]">Let's Explore</span>
+          </vs-button>
         </div>
       </div>
-      <div class="w-6/12">
-        <img
-          class="w-full h-[480px] rounded-tr-3xl rounded-bl-3xl object-cover"
-          src="@/assets/dummy/Hero.png"
-          alt=""
-        />
+      <div class="w-6/12 hidden md:block">
+        <img class="object-cover" src="@/assets/dummy/Hero.png" alt="" />
       </div>
     </section>
 
@@ -37,11 +42,11 @@
           <h4 class="text-[28px] font-semibold">Our Products</h4>
           <span>We Offer you the best places</span>
         </div>
-        <div class="">
-          <button @click="prodPrev">
+        <div class="w-[100px]">
+          <button class="w-10" @click="prodPrev">
             <img src="@/assets/icons/arrow-left.svg" alt="" />
           </button>
-          <button @click="prodNext">
+          <button class="w-10" @click="prodNext">
             <img src="@/assets/icons/arrow-right.svg" alt="" />
           </button>
         </div>
@@ -56,24 +61,14 @@
                 alt=""
               />
             </div>
-            <div class="bg-white flex justify-between mt-3">
+            <div class="flex justify-between mt-3">
               <div class="">
-                <h6 class="font-bold">Balencia</h6>
-                <span>Cluster Velencia</span>
+                <h6 class="font-bold text-[14px]">Balencia</h6>
+                <span class="text-[12px]">Cluster Velencia</span>
               </div>
-              <div
-                class="
-                  border-2 border-blue-secondary
-                  rounded-3xl
-                  px-2
-                  text-blue-secondary
-                  flex
-                  items-center
-                  justify-center
-                "
-              >
-                SUPER HOST
-              </div>
+              <vs-button success border>
+                <span class="text-[12px]">SUPER HOST</span>
+              </vs-button>
             </div>
           </div>
         </div>
@@ -95,47 +90,47 @@
           <span>We Offer you the best places</span>
         </div>
       </div>
-      <div class="flex justify-between mt-4">
+      <div class="flex flex-col items-center md:flex-row md:justify-around mt-4">
         <!-- Card -->
-        <div class="w-60 px-3">
+        <div class="w-60 border/50 shadow-sm mt-4 px-3 py-3 bg-gray-50">
           <div class="flex flex-col items-center gap-2">
             <img src="@/assets/icons/facility.svg" width="40" height="40" />
-            <h4 class="text-[24px] font-bold">Facility</h4>
+            <h4 class="text-[18px] font-semibold">Facility</h4>
           </div>
-          <p class="text-[14px] mt-2">
+          <p class="text-[14px] text-justify mt-2">
             Exclusive Club House facilities that have a swimming pool, indoor
             fitness, children's playground, Corner Garden, jogging track at the
             Botanical Park and other facilities
           </p>
         </div>
-        <div class="w-60 px-3">
+        <div class="w-60 border/50 shadow-sm mt-4 px-3 py-3 bg-gray-50">
           <div class="flex flex-col items-center gap-2">
             <img src="@/assets/icons/park.svg" width="40" height="40" />
-            <h4 class="text-[24px] font-bold">Botanical Park</h4>
+            <h4 class="text-[18px] font-semibold">Botanical Park</h4>
           </div>
-          <p class="text-[14px] mt-2">
+          <p class="text-[14px] text-justify mt-2">
             Exclusive Club House facilities that have a swimming pool, indoor
             fitness, children's playground, Corner Garden, jogging track at the
             Botanical Park and other facilities
           </p>
         </div>
-        <div class="w-60 px-3">
+        <div class="w-60 border/50 shadow-sm mt-4 px-3 py-3 bg-gray-50">
           <div class="flex flex-col items-center gap-2">
             <img src="@/assets/icons/location.svg" width="25" height="25" />
-            <h4 class="text-[24px] font-bold">Location</h4>
+            <h4 class="text-[18px] font-semibold">Location</h4>
           </div>
-          <p class="text-[14px] mt-2">
+          <p class="text-[14px] text-justify mt-2">
             Exclusive Club House facilities that have a swimming pool, indoor
             fitness, children's playground, Corner Garden, jogging track at the
             Botanical Park and other facilities
           </p>
         </div>
-        <div class="w-60 px-3">
+        <div class="w-60 border/50 shadow-sm mt-4 px-3 py-3 bg-gray-50">
           <div class="flex flex-col items-center gap-2">
             <img src="@/assets/icons/access.svg" width="26" height="26" />
-            <h4 class="text-[24px] font-bold">Easy Access</h4>
+            <h4 class="text-[18px] font-semibold">Easy Access</h4>
           </div>
-          <p class="text-[14px] mt-2">
+          <p class="text-[14px] text-justify mt-2">
             Exclusive Club House facilities that have a swimming pool, indoor
             fitness, children's playground, Corner Garden, jogging track at the
             Botanical Park and other facilities
@@ -151,11 +146,11 @@
           <h4 class="text-[28px] font-semibold">Our News</h4>
           <span>We Offer you the best places</span>
         </div>
-        <div class="">
-          <button @click="prodPrev">
+        <div class="w-[100px]">
+          <button class="w-10" @click="prodPrev">
             <img src="@/assets/icons/arrow-left.svg" alt="" />
           </button>
-          <button @click="prodNext">
+          <button class="w-10" @click="prodNext">
             <img src="@/assets/icons/arrow-right.svg" alt="" />
           </button>
         </div>
@@ -170,12 +165,12 @@
                 alt=""
               />
             </div>
-            <div class="bg-white flex justify-between mt-3">
+            <div class="flex justify-between mt-3">
               <div class="">
-                <h6 class="font-bold">
+                <h6 class="font-semibold">
                   Bank BUMN Ini Dorong Santri Untuk Jadi Developer
                 </h6>
-                <span>Jan 11, 2022</span>
+                <span class="text-[12px]">Jan 11, 2022</span>
               </div>
             </div>
           </div>
@@ -184,7 +179,7 @@
     </section>
 
     <!-- Footer -->
-    <Footer></Footer>
+    <Footer />
   </div>
 </template>
 
@@ -238,5 +233,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" >
+.vs-button {
+  padding: 0 !important;
+}
 </style>
