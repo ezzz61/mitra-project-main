@@ -1,5 +1,5 @@
 <template>
-  <section class="shadow-sm bg-gradient-to-r from-emerald-500 to-lime-600">
+  <section class="w-full fixed top-0 z-10 shadow-sm bg-gradient-to-r from-emerald-500 to-lime-600">
     <div
       class="
         font-sans
@@ -84,11 +84,10 @@
               Products
             </nuxt-link>
           </div>
-          <div class="flex sm:gap-x-4">
+          <div class="flex">
             <vs-button success to="/" class="mx-auto shadow font-medium rounded"
               ><span class="text-[16px] text-gray-200">Contact</span></vs-button
             >
-            <Modal class="mx-auto"/>
           </div>
         </div>
       </nav>

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Navigation/>
-    <header class="flex w-11/12 lg:w-10/12 3xl:container mx-auto">
+    <Navigation />
+    <header class="flex min-h-screen items-center w-11/12 lg:w-10/12 3xl:container mx-auto">
       <div>
-        <img src="@/assets/dummy/heroDetail.png" width="500" height="500"/>
+        <img src="@/assets/dummy/heroDetail.png" width="500" height="500" />
       </div>
 
       <div class="flex flex-col w-2/5 p-3">
@@ -48,17 +48,21 @@
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud
           </p>
-          <button class="p-2 text-white rounded text-sm bg-sky-500">Maps</button>
-          <button class="p-2 text-white rounded text-sm bg-sky-500">Appointment</button>
+          <div class="flex">
+            <vs-button class="rounded">
+              <span class="text-[16px] text-gray-200">Maps</span>
+            </vs-button>
+            <Modal />
+          </div>
         </div>
       </div>
     </header>
-    <Footer/>
+    <Footer class="mt-0"/>
   </div>
 </template>
 
 <script>
-export default{}
+export default {};
 </script>
 
 <style>

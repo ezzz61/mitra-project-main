@@ -2,8 +2,7 @@
   <div class="center">
     <vs-button
       @click="active = !active"
-      flat
-      class="mx-auto shadow font-medium rounded"
+      class="rounded"
       ><span class="text-[16px] text-gray-200">Appointment</span></vs-button
     >
     <vs-dialog v-model="active">

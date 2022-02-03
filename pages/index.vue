@@ -2,7 +2,7 @@
   <div>
     <Navigation />
     <!-- header -->
-    <section class="flex w-11/12 lg:w-10/12 3xl:container mx-auto mt-5 gap-10">
+    <section class="flex items-center min-h-screen w-11/12 lg:w-10/12 3xl:container mx-auto sm:mt-10 gap-10">
       <div class="w-full md:w-6/12 flex flex-col justify-center">
         <h1
           class="
