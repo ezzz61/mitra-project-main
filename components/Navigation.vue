@@ -1,15 +1,7 @@
 <template>
-  <section class="w-full fixed top-0 z-10 shadow-sm bg-gradient-to-r from-emerald-500 to-lime-600">
+  <section class="w-full fixed top-0 z-10 shadow-sm bg-emerald-600">
     <div
-      class="
-        font-sans
-        antialiased
-        w-11/12
-        lg:w-10/12
-        3xl:container
-        mx-auto
-        py-3
-      "
+      class="font-sans antialiased w-11/12 lg:w-9/12 3xl:container mx-auto py-2"
       id="app"
     >
       <nav class="flex items-center justify-between flex-wrap">
@@ -68,7 +60,7 @@
                 hover:no-underline hover:text-white
               "
             >
-              Featured
+              Features
             </nuxt-link>
             <nuxt-link
               to="/"
@@ -85,8 +77,11 @@
             </nuxt-link>
           </div>
           <div class="flex">
-            <vs-button success to="/" class="mx-auto shadow font-medium rounded"
-              ><span class="text-[16px] text-gray-200">Contact</span></vs-button
+            <vs-button
+              color="#e3bf7d"
+              to="/"
+              class="mx-auto shadow font-medium rounded"
+              ><span class="text-[16px] text-black">Contact</span></vs-button
             >
           </div>
         </div>
