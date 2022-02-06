@@ -6,7 +6,7 @@
     >
       <nav class="flex items-center justify-between flex-wrap">
         <nuxt-link to="/" class="flex items-center flex-no-shrink">
-          <img src="@/assets/icons/mitraland.svg" width="65" height="65" />
+          <img src="@/assets/icons/Mitraland.svg" width="65" height="65" />
           <!-- <span class="font-semibold text-xl tracking-tight"
             >TRIMITRA LAND</span
           > -->

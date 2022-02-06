@@ -18,7 +18,7 @@
             TRIMITRA<span class="text-blue-secondary tracking-widest"
               >LAND</span>
           </p> -->
-        <img src="@/assets/icons/mitraland.svg" width="65" height="65" />
+        <img src="@/assets/icons/Mitraland.svg" width="65" height="65" />
       </div>
       <div class="">
         <h2 class="text-[24px] font-medium tracking-wide text-white">
