@@ -96,8 +96,12 @@ export default {
     };
   },
 
-  mounted() {
-    this.getDetailsProduct();
+  async mounted() {
+    const loading = this.$vs.loading({
+      color: "#059669",
+    });
+    await this.getDetailsProduct();
+    loading.close();
   },
 
   methods: {

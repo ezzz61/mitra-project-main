@@ -33,21 +33,22 @@ export default {
       randomNews: {},
     };
   },
-  mounted() {
-    this.getBySlug();
-    this.getRandomNews();
+  async mounted() {
+    const loading = this.$vs.loading({
+      color: "#059669",
+    });
+
+    await this.getBySlug();
+    await this.getRandomNews();
+
+    loading.close();
   },
   methods: {
     async getBySlug() {
       try {
-        const loading = this.$vs.loading({
-          background: "#fff",
-          color: "#fff",
-        });
         const response = await this.$axios.get(`api/news/slug/${this.slug}`);
         if (response.data.status === 200) {
           this.details = response.data.data;
-          loading.close();
         }
       } catch (error) {
         console.log(error);

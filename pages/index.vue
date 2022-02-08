@@ -69,8 +69,7 @@ export default {
   },
   async mounted() {
     const loading = this.$vs.loading({
-      background: this.color,
-      color: "#fff",
+      color: "#059669",
     });
 
     await this.getHome();

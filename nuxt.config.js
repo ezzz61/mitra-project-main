@@ -66,7 +66,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // baseURL: "http://localhost:8080",
-    baseURL: "https://staging-trimitra.herokuapp.com/",
+    baseURL: "https://trimitra-server.herokuapp.com",
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
