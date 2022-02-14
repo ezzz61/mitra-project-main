@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen mt-4">
+  <section class="min-h-screen mt-16">
     <h1 class="text-[26px] py-4 font-bold">{{ details.title }}</h1>
     <div class="h-[350px]">
       <img
@@ -9,9 +9,9 @@
       />
     </div>
     <div class="w-full h-[1px] bg-slate-300 my-6"></div>
-    <div class="flex gap-10">
-      <div class="w-9/12" v-html="details.body"></div>
-      <div class="w-3/12">
+    <div class="flex flex-col md:flex-row gap-10">
+      <div class="w-full md:w-9/12 text-justify" v-html="details.body"></div>
+      <div class="w-full md:w-3/12">
         <h4 class="text-[16px] font-semibold mb-4 uppercase">Other News</h4>
         <NewsCard
           :title="randomNews.title"

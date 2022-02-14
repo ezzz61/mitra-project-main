@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <div class="flex justify-between items-center mx-auto gap-12">
-      <div class="w-6/12">
+    <div class="flex flex-col md:flex-row justify-between items-center mx-auto gap-12 mt-16">
+      <div class="w-full md:w-6/12">
         <VueSlickCarousel
           v-if="images.length"
           class="mt-4"
@@ -17,7 +17,7 @@
           </div>
         </VueSlickCarousel>
       </div>
-      <div class="flex flex-col w-6/12 p-3">
+      <div class="w-full flex flex-col md:w-6/12 p-3">
         <div class="flex mb-3 gap-x-4">
           <div class="flex items-center gap-2">
             <img src="@/assets/icons/bed.png" width="45" height="45" />
