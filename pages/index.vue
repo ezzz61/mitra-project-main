@@ -45,6 +45,13 @@
 
     <Products />
 
+    <iframe
+      v-if="embededUrl.isActive"
+      class="w-full h-[280px] lg:h-[400px] mt-12"
+      :src="embededUrl.url"
+    >
+    </iframe>
+
     <div ref="banners" class="">
       <Banners
         :title="homeBannerOverview.title"
@@ -62,6 +69,7 @@
 export default {
   data() {
     return {
+      embededUrl: {},
       homeContent: {},
       homeBanners: [{}],
       homeBannerOverview: {},
@@ -74,6 +82,7 @@ export default {
 
     await this.getHome();
     await this.getHomeBanners();
+    await this.getUrl();
 
     loading.close();
   },
@@ -85,6 +94,14 @@ export default {
           ...response.data.data.data,
           image: `${this.$axios.defaults.baseURL}/${response.data.data.data.image}`,
         };
+      }
+    },
+
+    async getUrl() {
+      const response = await this.$axios.get("/api/home/url");
+      if (response.data.data.status === 200) {
+        this.embededUrl = response.data.data.data;
+        console.log(this.embededUrl);
       }
     },
 
