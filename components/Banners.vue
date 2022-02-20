@@ -1,17 +1,27 @@
 <template>
   <section class="mt-14">
     <div class="">
-      <h4 class="text-[28px] font-semibold">
-        {{ title }}
-      </h4>
+      <div class="flex justify-between w-full text-black-primary">
+        <h4 class="text-[28px] font-semibold">
+          {{ title }}
+        </h4>
+        <div class="w-[100px]">
+          <button class="w-10" @click="prodPrev">
+            <img src="@/assets/icons/arrow-left.svg" alt="" />
+          </button>
+          <button class="w-10" @click="prodNext">
+            <img src="@/assets/icons/arrow-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
       <span>{{ overview }}</span>
     </div>
     <div class="mt-4 overflow-hidden">
-      <VueSlickCarousel v-bind="settings">
+      <VueSlickCarousel ref="carousel_prod" class="" v-bind="settings">
         <img
           v-for="(banner, index) in banners"
           :key="index"
-          class="h-[420px] object-cover w-full"
+          class="object-cover w-full h-[320px] lg:h-[420px]"
           :src="banner.data"
           alt=""
         />
@@ -26,15 +36,25 @@ export default {
   data() {
     return {
       settings: {
+        arrows: true,
         dots: true,
-        dotsClass: "slick-dots custom-dot-class",
         edgeFriction: 0.35,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
       },
     };
+  },
+  methods: {
+    prodNext() {
+      this.$refs.carousel_prod.next();
+    },
+    prodPrev() {
+      this.$refs.carousel_prod.prev();
+    },
   },
 };
 </script>

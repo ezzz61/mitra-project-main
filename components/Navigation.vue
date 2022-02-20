@@ -36,7 +36,7 @@
           "
         >
           <div class="sm:flex-grow text-center">
-            <nuxt-link
+            <!-- <nuxt-link
               to="/"
               href="#responsive-header"
               class="
@@ -48,8 +48,8 @@
               "
             >
               Home
-            </nuxt-link>
-            <nuxt-link
+            </nuxt-link> -->
+            <!-- <nuxt-link
               to="/"
               href="#responsive-header"
               class="
@@ -74,7 +74,7 @@
               "
             >
               Products
-            </nuxt-link>
+            </nuxt-link> -->
           </div>
           <div class="flex">
             <vs-button
