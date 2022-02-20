@@ -77,11 +77,20 @@
             </nuxt-link> -->
           </div>
           <div class="flex">
-            <vs-button
-              color="#e3bf7d"
-              to="/"
-              class="mx-auto shadow font-medium rounded"
-              ><span class="text-[16px] text-black">Contact</span></vs-button
+            <a
+              href="https://wa.link/k45axz"
+              target="_blank"
+              class="
+                mx-auto
+                shadow
+                font-medium
+                rounded
+                bg-secondary-color
+                py-2
+                px-3
+                hover:no-underline
+              "
+              ><span class="text-[16px] text-black">Contact</span></a
             >
           </div>
         </div>
