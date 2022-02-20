@@ -17,11 +17,15 @@
       <span>{{ overview }}</span>
     </div>
     <div class="mt-4 overflow-hidden">
-      <VueSlickCarousel ref="carousel_prod" class="" v-bind="settings">
+      <VueSlickCarousel
+        ref="carousel_prod"
+        class="lg:h-[420px]"
+        v-bind="settings"
+      >
         <img
           v-for="(banner, index) in banners"
           :key="index"
-          class="object-cover w-full h-[320px] lg:h-[420px]"
+          class="object-cover w-full"
           :src="banner.data"
           alt=""
         />
