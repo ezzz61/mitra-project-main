@@ -84,9 +84,63 @@ export default {
     await this.getHomeBanners();
     await this.getUrl();
 
+    if (this.$route.query.verify) {
+      this.verifyAppointment();
+    }
+
     loading.close();
   },
   methods: {
+    openNotification(position = null, color, title, text) {
+      const noti = this.$vs.notification({
+        color,
+        position,
+        title: "Appointment Verification Success",
+        text: "Your appointment verification success",
+      });
+    },
+
+    async verifyAppointment() {
+      try {
+        const loading = this.$vs.loading({
+          color: "#059669",
+        });
+
+        const response = await this.$axios.get(
+          `api/appointment/${this.$route.query.verify}`
+        );
+        if (response.data.data.is_verified) {
+          this.$router.push("/");
+          loading.close();
+        }
+        if (response.data.status === 200 && !response.data.data.is_verified) {
+          this.detailSiswa = response.data.data;
+          const verify = await this.$axios.put(
+            `api/appointment/verify/${this.$route.query.verify}`
+          );
+          if (verify.status === 200) {
+            loading.close();
+            this.openNotification(
+              "top-right",
+              "success",
+              "Appointment Verification Success",
+              "our appointment verification success"
+            );
+          } else {
+            loading.close();
+            this.openNotification(
+              "top-right",
+              "error",
+              "Failed to verify",
+              " "
+            );
+          }
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
     async getHome() {
       const response = await this.$axios.get("/api/home");
       if (response.data.data.status === 200) {
