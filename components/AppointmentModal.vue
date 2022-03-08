@@ -121,6 +121,7 @@
 import { required, minLength, maxLength } from "vuelidate/lib/validators";
 
 export default {
+  props: ["product_id"],
   data() {
     return {
       active: false,
@@ -179,10 +180,10 @@ export default {
             "Data yang dimasukkan belum sesuai , mohon memasukkan data yang valid"
           );
         } else {
-          const response = await this.$axios.post(
-            "/api/appointment/add",
-            this.$v.form.$model
-          );
+          const response = await this.$axios.post("/api/appointment/add", {
+            ...this.$v.form.$model,
+            product: this.product_id,
+          });
 
           if (response.data.status == 200) {
             this.active = false;

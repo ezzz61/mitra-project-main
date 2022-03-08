@@ -1,6 +1,16 @@
 <template>
   <div class="">
-    <div class="flex flex-col md:flex-row justify-between items-center mx-auto gap-12 mt-16">
+    <div
+      class="
+        flex flex-col
+        md:flex-row
+        justify-between
+        items-center
+        mx-auto
+        gap-12
+        mt-16
+      "
+    >
       <div class="w-full md:w-6/12">
         <VueSlickCarousel
           v-if="images.length"
@@ -66,7 +76,7 @@
                 >Maps</a
               >
             </vs-button>
-            <AppointmentModal />
+            <AppointmentModal :product_id="product_id" />
           </div>
         </div>
       </div>
@@ -82,6 +92,7 @@
 export default {
   data() {
     return {
+      product_id: "",
       settings1: {
         dots: true,
         dotsClass: "slick-dots custom-dot-class",
@@ -122,6 +133,7 @@ export default {
 
           this.images = data;
           this.details = response.data.data;
+          this.product_id = response.data.data._id;
         }
       } catch (error) {
         console.log(error);
